@@ -6,13 +6,21 @@
 
 	<script type="text/javascript">
 		let firstName = "Justin";
+		let lastName = "Trudeau";
+		let email = "jt@mcrcmail.ca";
 
 		function setValues(){
 			document.getElementById("idTxtFirstName").value = firstName;
+			document.getElementById("idTxtLastName").value = lastName;
+			document.getElementById("idTxtName").value = firstName + " " + lastName;
+			document.getElementById("idTxtEmail").value = email;
 		}
 
 		function clearFields(){
 			document.getElementById("idTxtFirstName").value = "";
+			document.getElementById("idTxtLastName").value = "";
+			document.getElementById("idTxtName").value = "";
+			document.getElementById("idTxtEmail").value = "";
 		}
 	</script>	
 </head>
@@ -24,9 +32,9 @@
 	<input type="button" value="Show information" onclick="setValues();"/>
 	<input type="button" value="Clear" onclick="clearFields();"/>
 
-	<p>Name: <input type="text" id="idTxtFirstName"/><p/>
-	<p>Last Name: <input type="text" id="idTxtLastName"/><p/>
-	<p>Name: <input type="text" id="idTxtName"/><p/>
-	<p>Email: <input type="text" id="idTxtEmail"/><p/>
+	<p>Name: <input type="text" id="idTxtFirstName"/></p>
+	<p>Last Name: <input type="text" id="idTxtLastName"/></p>
+	<p>Name: <input type="text" id="idTxtName"/></p>
+	<p>Email: <input type="text" id="idTxtEmail"/></p>
 </body>
 </html>
