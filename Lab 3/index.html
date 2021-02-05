@@ -10,15 +10,25 @@
     let text="When in Rome, do as the Romans do";
     document.write("The lenght of '" + text +'\' is: ' + text.length);
     document.write("<br>");
+    
     //get the lenght of this string: the squeaky wheel gets the grease
-
+    let text2 = "the squeaky wheel gets the grease";
+    document.write("The length of '" + text2 + '\' is: ' + text2.length)
+    document.write("<br><hr>");
+    
     //#################################
     //2.- indexOf
     let email="myuser2003@gmail.com";
+    document.write("The index of @ is: " + email.indexOf('@') );
+    document.write("<br><hr>");
 
     //#################################
     //3.- substring
     let strTmp="An apple a day keeps the doctor away.";
+    document.write("The substring using substr function with indexes 4 and 6 (inclusive) is: " + strTmp.substr(4,6) );
+    document.write("<br>");
+    document.write("The substring using substr function with indexes 4 and 6 (inclusive) is: " + strTmp.substring(4,6) );
+    document.write("<br><hr>");
 
     //#################################
     //4.- create a function that replace the DOM text with the email user and email domain
@@ -31,10 +41,14 @@
         let resultText = "";
 
         let index = email.indexOf('@');
-        emailuser.innerHTML =  'Implement this';
-        emaildomain.innerHTML =  'Implement this';
+        emailuser.innerHTML =  email.substring(0, index);
+        emaildomain.innerHTML =  email.substring(index + 1);
     }
     </script>
+    <style>
+        div {border: 1px solid red;}
+        p#email {color: red;}
+    </style>
 </head>
 <body>
     <div>
