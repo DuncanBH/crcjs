@@ -10,36 +10,11 @@
                   /*border: 1px dashed green;*/
                 }
     </style>
-    <script>        
-        function checkUsername(){
-            let textFieldUsername       = document.getElementById('username');
-            let textFieldErrorUsername  = document.getElementById('errorUsername');
-
-            let username = textFieldUsername.value;
-
-            textFieldErrorUsername.innerText = "*";
-            if(!isNaN(username)){
-                textFieldErrorUsername.innerText = "* No numbers allowed";
-            }
-        }
-
-        function checkNumber(){
-            //implement check if is a number
-            let textFieldAge        = document.getElementById('age');
-            let textFieldErrorAge   = document.getElementById('errorAge');
-
-            let age = textFieldAge.value;
-            textFieldErrorAge.innerText = "*";
-            
-            if(isNaN(age)){
-                textFieldErrorAge.innerText = "* Only numbers allowed";
-            }
-        }
-    </script>
 </head>
 <body>
     <p><span class="error">* required field</span></p>
-    Name: <input type="text" name="name" id="username" onchange="checkUsername()"/><span class="error" id="errorUsername">*</span><br><br>
-    Age: <input type="text" name="age" id="age" onchange="checkNumber();"/><span class="error" id="errorAge">*</span><br><br>
+    Name: <input type="text" name="name" id="username" /><span class="error" id="errorUsername">*</span><br><br>
+    Age: <input type="text" name="age" id="age" /><span class="error" id="errorAge">*</span><br><br>
+    <script src="scripts.js"></script>
 </body>
 </html>
