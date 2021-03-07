@@ -20,7 +20,10 @@
         
         function myClickBtn1kHandler(){
             let arrayElements = document.querySelectorAll(".hot");
-            //traverse the array and element classname property set to "myCool"
+            
+            arrayElements.forEach(element => {
+                element.className = "myCool";
+            });
         }
     </script>
 <body>

@@ -10,22 +10,20 @@
                   /*border: 1px dashed green;*/
                 }
     </style>
-</head>
-<body>
-    <p><span class="error">* required field</span></p>
-    Name: <input type="text" name="name" id="username" onchange="checkUsername()"/><span class="error" id="errorUsername">*</span><br><br>
-    Age: <input type="text" name="age" id="age" onchange="checkNumber();"/><span class="error" id="errorAge">*</span><br><br>
-
     <script>
         //You have to add the event listener 'load' so you can move this script into the <head> tag
         //you have an example here:
         //https://github.com/lauramarianella/crcjs/blob/master/ss5Events/2ndExample_3_EventListener/recommendedOnLoad.html
         (function(){
-            let elUsername = document.getElementById('username');
-            elUsername.addEventListener('change', checkUsername, false);
+            window.addEventListener("load", initialize);
+            function initialize() {
+                let elUsername = document.getElementById('username');
+                elUsername.addEventListener('change', checkUsername, false);
+    
+                let elAge = document.getElementById('age');
+                elAge.addEventListener('click', checkNumber, false);
+            }
 
-            let elAge = document.getElementById('age');
-            elAge.addEventListener('click', checkNumber, false);
         })();
 
         function checkUsername(){
@@ -54,5 +52,10 @@
         }
     </script>
     
+</head>
+<body>
+    <p><span class="error">* required field</span></p>
+    Name: <input type="text" name="name" id="username" onchange="checkUsername()"/><span class="error" id="errorUsername">*</span><br><br>
+    Age: <input type="text" name="age" id="age" onchange="checkNumber();"/><span class="error" id="errorAge">*</span><br><br>
 </body>
 </html>

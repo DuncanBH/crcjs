@@ -17,7 +17,14 @@
                 elBtn1.addEventListener('click', myClickBtn1kHandler, false);
 
                 let elBtn2 = document.getElementById('myButton2');
-                //your code goes here
+                elBtn2.addEventListener('click', myClickBtn2kHandler, false );
+                
+                let elBtn3 = document.getElementById('myButton3');
+                elBtn3.addEventListener('click', myClickBtn3kHandler, false );
+                
+                let elBtn4 = document.getElementById('myButton4');
+                elBtn4.addEventListener('click', myClickBtn4kHandler, false );
+                
             }  
         })();
         
@@ -25,7 +32,22 @@
             let el = document.getElementById("one");
             el.className = "";
         }
-        //your code goes here, create the other functions to change the class-style
+
+        function myClickBtn2kHandler() {
+            let el = document.getElementById("two");
+            el.className = "cool";
+        }
+        
+        function myClickBtn3kHandler() {
+            let el = document.getElementById("three");
+            el.className = "cool";
+        }
+        
+        function myClickBtn4kHandler() {
+            let el = document.getElementById("four");
+            el.className = "hot";
+        }
+
     </script>
 <body>
     <div id="page">

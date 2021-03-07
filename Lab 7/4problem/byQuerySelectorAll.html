@@ -21,7 +21,9 @@
         
         function myClickBtn1kHandler(){
             let arrayElements = document.querySelectorAll("li");
-            //"myCool"
+            arrayElements.forEach(element => {
+                element.className = "myCool";
+            });
         }
     </script>
 <body>
