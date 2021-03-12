@@ -365,3 +365,7 @@ li i {
     background-size: 72px 72px;
   }
 }
+
+.myBorder {
+  border: red dashed 2px;
+}

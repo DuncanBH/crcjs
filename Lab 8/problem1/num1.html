@@ -6,14 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
 
+    <script>
+        $( document ).ready(function() {
+            $("#myButton1").click(function (event)  {
+                addColors();
+            }); 
+            $("#myButton4").click(function (event)  {
+                addBorders();
+            }); 
+            $("#myButton2").click(function (event)  {
+                fadeInFirst();
+            }); 
+            $("#myButton3").click(function (event)  {
+                fadeInSecond();
+            }); 
+        });
+
+        function addColors() {
+            let arrayLi = $("li");
+
+            for (let i = 0; i < arrayLi.length; i++){
+                if (i % 2 == 0)
+                    arrayLi[i].className = "cool";
+                else
+                    arrayLi[i].className = "hot";
+            }
+        }
+
+        function addBorders() {
+            let arrayLi = $("li");
+
+            for (let i = 0; i < arrayLi.length; i++){
+                arrayLi[i].className += " myBorder";
+            }
+        }
+
+        function fadeInFirst() {
+            let arrayLi = $("li");
+            $("li#one").hide().fadeIn(1000);
+            $("li#two").hide().fadeIn(1000);
+            $("li#three").hide().fadeIn(1000);
+        }
+        function fadeInSecond() {
+            let arrayLi = $("li");
+            $("li#four").hide().fadeIn(1000);
+            $("li#five").hide().fadeIn(1000);
+            $("li#six").hide().fadeIn(1000);
+        }
+    </script>
 <body>
     <div id="page">
         <h1 id="header">List</h1>
         <h2>Buy groceries</h2><br/>
         <h2>In Maxi</h2>
         <ul>
-            <li id="one" ><em>fresh</em> figs</li>
+            <li id="one"><em>fresh</em> figs</li>
             <li id="two">pine nuts</li>
             <li id="three">honey</li>
             <li id="four">balsamic vinegar</li>
@@ -22,8 +73,9 @@
         </ul>
 
         <input id="myButton1" type="button" value="add classes"/><br/>
+        <input id="myButton4" type="button" value="add border"/><br/>
         <input id="myButton2" type="button" value="Fade In"/><br/>
-        <input id="myButton3" type="button" value="Fade Out"/><br/>
+        <input id="myButton3" type="button" value="Fade In"/><br/>
     </div>
 
 </body>
