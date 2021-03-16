@@ -5,17 +5,39 @@
 		<meta charset="utf-8">
 		
 		<style> 
-			ul{list-style:none;padding:0px, margin:0px}	
+			ul{list-style:none;padding:0px; margin:0px}	
 			li{border: 1px solid #ccc; background-color:#eee; padding: 5px,10px; color:#000; ;width:300px }
 			li span{padding-left:10px}
 			h1{ margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
             header {background: #FFC340;width:400px;color: black;font-size: 48px;text-align: center;line-height: 1.5em;border: 1px solid black;}
             article {background: white; overflow: auto; width:400px; border: 1px solid black;}
 		</style>
-
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+		crossorigin="anonymous"></script>
 	
 		<script>
+			$( document ).ready(function() { 
+				$("#btnAdd").click( function (event) {
+					addListElement();
+				});
 
+				$("#btnClr").click( function (event) {
+					clearList();
+				});
+			});
+
+			function addListElement() {
+				if ($("#inItemText").val() != "")
+				{
+					$("ul#todolist").append(`<li>${$("#inItemText").val()}</li>`);
+					$("#inItemText").val("")
+				}
+			}
+
+			function clearList() {
+				$("li").remove();
+			}
 		</script>
          
 	</head>
