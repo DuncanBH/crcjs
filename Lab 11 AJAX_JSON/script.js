@@ -29,13 +29,15 @@
     function showData(responseFromServer) {
       console.log('This is the server response: ' + responseFromServer);
       let holdData = JSON.parse(responseFromServer) ;
+      let holdOutput = "";
       holdData.forEach(element => {
-        $("content").innerHTML += `<div class="event">
+          holdOutput += `<div class="event">
           <img src="${element.img}" alt="Map of ${element.state}" />
           <p><b>${element.city}</b><br>
           ${element.date}</p>
           </div>`;
       });
+      $("content").innerHTML = holdOutput;
 
     }
   
