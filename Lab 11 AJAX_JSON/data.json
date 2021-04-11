@@ -1,0 +1,13 @@
+[ {  "img"    :"img/map-ca.png"
+    ,"state"  :"California"
+    ,"city"   :"San Francisco, CA"
+    ,"date"   :"May 1"}
+  ,{  "img"   :"img/map-tx.png"
+     ,"state" :"Texas"
+     ,"city"  :"Austin, TX"
+     ,"date"  :"May 15"}
+  ,{  "img"   :"img/map-ny.png"
+     ,"state" :"New York"
+     ,"city"  :"New York, NY"
+     ,"date"  :"May 30"}
+]
